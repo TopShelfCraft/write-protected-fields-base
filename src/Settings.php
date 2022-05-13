@@ -33,7 +33,7 @@ class Settings
 		{
 			if (is_callable($this->writeProtected[$field->handle]))
 			{
-				return ($this->writeProtected[$field->handle])();
+				return ($this->writeProtected[$field->handle])($field);
 			}
 			return (bool)$this->writeProtected[$field->handle];
 		}
